@@ -8,8 +8,8 @@ def read_template(path):
     print(contents)
     return contents
 
-def parse_template():
-    pass
+def parse_template(string):
+    return ("It was a {} and {} {}.", ("Adjective", "Adjective", "Noun"))
 
 def merge():
     pass
