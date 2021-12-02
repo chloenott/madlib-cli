@@ -12,11 +12,11 @@ def parse_template(string):
     regex = r"{(\w*)}"
     parts = tuple(re.findall(regex, string))
     stripped = re.sub(regex, '{}', string)
-    return ("It was a {} and {} {}.", parts)
+    return (stripped, parts)
 
 
-def merge():
-    pass
+def merge(stripped, parts):
+    return stripped.format(*parts)
 
 
 
