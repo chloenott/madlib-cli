@@ -2,10 +2,12 @@ import re
 
 
 def read_template(path):
-    with open(path) as file:
-        contents = file.read().strip()
-    print(contents)
-    return contents
+    try:
+        with open(path) as file:
+            contents = file.read().strip()
+        return contents
+    except:
+        raise FileNotFoundError
 
 
 def parse_template(string):
